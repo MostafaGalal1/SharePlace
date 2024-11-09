@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+      - name: frontend
+        image: docker.aic.gov.eg/dev/mern-project-frontend:v2.0.6
+        ports:
+        - containerPort: 80
+        env:
+        - name: REACT_APP_BACKEND_URL
+          value: "http://10.54.135.44:5000/api"
+        - name: REACT_APP_ASSET_URL
+          value: "http://10.54.135.44:5000"
+      imagePullSecrets:
+      - name: my-registry-secret

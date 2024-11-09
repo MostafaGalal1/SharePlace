@@ -1,0 +1,9 @@
+{
+    "env": {
+        "DB_USER": "mern-admin",
+        "DB_PASSWORD": "mern-what-is-the-purpose",
+        "DB_NAME": "mern",
+        "GOOGLE_API_KEY": "AIzaSyBin4tqq4NSWHePzJBrf4YSnqQBAkRzQLo",
+        "JWT_KEY": "supersecret_dont_share"
+    }
+}
